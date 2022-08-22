@@ -1,0 +1,47 @@
+<div class="card" style="margin-top: 20px">
+  <div class="card-header panel-background">
+    Object Detection Demo
+    <div class="float-end" style="margin-right: 10px">
+      <button class="btn btn-sm btn-warning">
+        <fa-icon [icon]="faCamera"></fa-icon> Live Camera
+      </button>
+    </div>
+    <div class="float-end" style="margin-right: 10px">
+      <button class="btn btn-sm btn-warning" (click)="open()">
+        <fa-icon [icon]="faUpload"></fa-icon> Upload File
+      </button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="col-md-12">
+      
+       <table class="table">
+           <thead>
+            <tr>
+               <th> Uploaded </th>
+               <th> Detected </th>
+            </tr>
+           </thead>
+           <tbody>
+               <!-- <tr>
+                 <td>
+                    <img src="http://localhost:5001/static/workdir/captured/cutedogs.jpeg"/>
+                 </td> 
+                 <td>
+                    <img src="http://localhost:5001/static/workdir/detected/cutedogs.jpeg"/>
+                 </td> 
+               </tr> -->
+               <!-- <tr>
+                <td>
+                    <app-vjs-player-component [options]="{fluid : true, autoplay: true, controls: true, sources: [{ src: 'http://localhost:5001/static/workdir/captured/jet03.m4v', type: 'video/mp4' }]}"></app-vjs-player-component>
+                    
+                </td> 
+                <td>
+                    <app-vjs-player-component [options]="{autoplay: true, controls: true, sources: [{ src: 'http://localhost:5001/static/workdir/detected/jet03.mp4', type: 'video/mp4' }]}"></app-vjs-player-component>
+                </td> 
+              </tr> -->
+           </tbody>
+       </table>
+    </div>   
+  </div>  
+</div>

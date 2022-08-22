@@ -1,0 +1,47 @@
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+        color: #fff;
+        background-color: #0029a0;
+    }
+
+.panel-background {
+        background: black;
+        color: white;
+    }
+
+a:hover {
+        background: #0b2265;
+        color: white;
+    }
+ 
+ .gallerypic {
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+ }
+
+ .gallerypic > img {
+    min-width: 400px;
+ }
+
+ table {
+    text-align: center;
+ }
+
+ thead {
+    background: black;
+    color: white;
+ }
+
+ td {
+    text-align: center;
+    padding:10px;
+ }
+ td > img {
+    min-width: 400px;
+ }
+
+.modal-xl .modal-lg {
+   min-width:1400px;
+   max-width: 90%;
+ }

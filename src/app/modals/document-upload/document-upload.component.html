@@ -1,0 +1,66 @@
+<div class="card paneSettings">
+  <div class="card-header panel-background">
+    Upload Image/Video
+    <button
+      type="button"
+      class="btn btn-sm btn-warning float-end"
+      aria-label="Close"
+      (click)="dismiss()"
+      style="margin-left: 5px"
+    >
+      <fa-icon [icon]="faTimesCircle"></fa-icon>
+    </button>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-12">
+        <p> Please upload image / video files </p>
+        <form novalidate [formGroup]="formImport" >
+          <div class="input-group mb-3">
+            <div class="custom-file">
+              <input
+                type="file"
+                class="custom-file-input"
+                single
+                formControlName="importFile"
+                id="importFile"
+                (change)="onFileChange($event.target)"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6" style="text-align: center">
+              <img [src]="srcdata" *ngIf="uploadfileType == 'image'" width="500"/>
+              <video
+                [src]="srcdata"
+                *ngIf="uploadfileType == 'video'"
+                controls
+                width="500" autoplay="true"
+              ></video>
+            </div>
+            <div class="col-md-6" style="text-align: center" *ngIf="isProcessed">
+                <img [src]="processedData" *ngIf="uploadfileType == 'image'" width="500"/>
+                <video
+                [src]="processedData"
+                *ngIf="uploadfileType == 'video'"
+                controls
+                width="500" autoplay="true"
+              ></video>
+              <div><span class="badge bg-primary detectedObjects" *ngFor="let rec of processedObject">{{rec.objectName}} ({{rec.count}})</span></div>
+            </div>
+          </div>
+         
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <div *ngIf="isProcessing" style="color:blueviolet">
+    <div class="spinner-border spinner-border-sm"  role="status">
+    </div> <span style="margin-left:10px">Processing please wait ....</span>
+  </div>
+  
+  <button type="button" class="btn btn-default" [disabled]="true" *ngIf="uploadfileType === undefined">Upload & Process</button>
+  <button type="button" class="btn btn-warning" [disabled]="false" *ngIf="uploadfileType !== undefined" (click)="onUpload()">Upload & Process</button>
+</div>
