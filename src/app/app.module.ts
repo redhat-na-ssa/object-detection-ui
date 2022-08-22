@@ -12,14 +12,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { HighlightModule, HIGHLIGHT_OPTIONS,HighlightOptions } from 'ngx-highlightjs';
 import { MainComponentComponent } from './main-component/main-component.component';
-import { VjsPlayerComponentComponent } from './vjs-player-component/vjs-player-component.component';
 import { DocumentUploadComponent } from './modals/document-upload/document-upload.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponentComponent,
-    VjsPlayerComponentComponent,
     DocumentUploadComponent
   ],
   imports: [
