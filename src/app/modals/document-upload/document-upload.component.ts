@@ -22,6 +22,7 @@ export class DocumentUploadComponent implements OnInit {
   isProcessed : boolean = false;
   isProcessing : boolean = false;
   processedObject : any[] = new Array();
+  modelInfo! : any;
 
   constructor(public activeModal: NgbActiveModal,private yoloservice : Yolov5Service,public fb : FormBuilder) {
     this.formImport = this.fb.group({
@@ -52,6 +53,7 @@ export class DocumentUploadComponent implements OnInit {
          } */
         }
         this.processedObject = resp.detectedObj;
+        this.modelInfo = resp.modelInfo;
       });
   }
 

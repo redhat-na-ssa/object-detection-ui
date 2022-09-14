@@ -39,6 +39,7 @@
               ></video>
             </div>
             <div class="col-md-6" style="text-align: center" *ngIf="isProcessed">
+               
                 <img [src]="processedData" *ngIf="uploadfileType == 'image'" width="500"/>
                 <video
                 [src]="processedData"
@@ -46,6 +47,7 @@
                 controls
                 width="500" autoplay="true"
               ></video>
+              <div class="alert alert-info" style="margin: 10px;padding: 3px;"> Model Info : {{modelInfo.name}}</div>
               <div><span class="badge bg-primary detectedObjects" *ngFor="let rec of processedObject">{{rec.objectName}} ({{rec.count}})</span></div>
             </div>
           </div>
